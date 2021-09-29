@@ -1,6 +1,4 @@
 import unittest
-from ner_client import NamedEntityClient
-from test_doubles import NerModelTestDouble
 
 
 class TestNerClient(unittest.TestCase):
