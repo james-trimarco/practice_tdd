@@ -93,3 +93,30 @@ class TestSummation:
         sum_of_ints = summation(data)
         # validation
         assert sum_of_ints == 32
+
+
+class TestAverage:
+    def test_average_is_function(self):
+        """Confirms existence and callability of summation() function."""
+        assert callable(average)
+
+    def test_count_returns_int(self):
+        """The function count() should return an integer."""
+        # setup
+        file_name = Path.cwd() / "test" / "test_nums.txt"
+        data = read_ints(file_name)
+        # execution
+        mean_of_ints = average(data)
+        # validation
+        assert isinstance(mean_of_ints, int)
+
+    def test_summation_returns_correct_answer(self):
+        """The function summation() should return expected value for
+        the test data."""
+        # setup
+        file_name = Path.cwd() / "test" / "test_nums.txt"
+        data = read_ints(file_name)
+        # execution
+        mean_of_ints = average(data)
+        # validation
+        assert mean_of_ints == 1
