@@ -5,7 +5,7 @@ import pytest
 
 class TestReadInts:
     def test_read_ints_is_function(self):
-        """Confirms existence and callabilityof function."""
+        """Confirms existence and callability of read_ints() function."""
         assert callable(read_ints)
 
     def test_read_ints_returns_list(self):
@@ -38,8 +38,8 @@ class TestReadInts:
 
 
 class TestCount:
-    def test_read_ints_is_function(self):
-        """Confirms existence and callabilityof function."""
+    def test_count_is_function(self):
+        """Confirms existence and callability of count() function."""
         assert callable(count)
 
     def test_count_returns_int(self):
@@ -48,6 +48,17 @@ class TestCount:
         file_name = Path.cwd() / "test" / "test_nums.txt"
         data = read_ints(file_name)
         # execution
-        counted = count(data)
+        integer_count = count(data)
         # validation
-        assert isinstance(counted, int)
+        assert isinstance(integer_count, int)
+
+    def test_count_returns_correct_answer(self):
+        """The function count() should return expected value for
+        the test data."""
+        # setup
+        file_name = Path.cwd() / "test" / "test_nums.txt"
+        data = read_ints(file_name)
+        # execution
+        integer_count = count(data)
+        # validation
+        assert integer_count == 5
