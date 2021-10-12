@@ -1,6 +1,7 @@
 from practicetdd.refactoring_legacy_code.compute_stats import (
-    read_ints,
+    average,
     count,
+    read_ints,
     summation,
 )
 from pathlib import Path
@@ -73,7 +74,7 @@ class TestSummation:
         """Confirms existence and callability of summation() function."""
         assert callable(summation)
 
-    def test_count_returns_int(self):
+    def test_count_returns_float(self):
         """The function count() should return an integer."""
         # setup
         file_name = Path.cwd() / "test" / "test_nums.txt"
@@ -101,14 +102,14 @@ class TestAverage:
         assert callable(average)
 
     def test_count_returns_int(self):
-        """The function count() should return an integer."""
+        """The function count() should return a float."""
         # setup
         file_name = Path.cwd() / "test" / "test_nums.txt"
         data = read_ints(file_name)
         # execution
         mean_of_ints = average(data)
         # validation
-        assert isinstance(mean_of_ints, int)
+        assert isinstance(mean_of_ints, float)
 
     def test_summation_returns_correct_answer(self):
         """The function summation() should return expected value for
@@ -119,4 +120,4 @@ class TestAverage:
         # execution
         mean_of_ints = average(data)
         # validation
-        assert mean_of_ints == 1
+        assert mean_of_ints == 6.4

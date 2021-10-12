@@ -28,6 +28,12 @@ def summation(data: List[int]) -> int:
     return sum(data)
 
 
+def average(data: List[int]) -> float:
+    sum_of_ints = summation(data)
+    count_of_ints = count(data)
+    return sum_of_ints / count_of_ints
+
+
 def compute_stats(file):
     total = 0
     sum = 0
