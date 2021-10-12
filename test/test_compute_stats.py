@@ -98,11 +98,11 @@ class TestSummation:
 
 class TestAverage:
     def test_average_is_function(self):
-        """Confirms existence and callability of summation() function."""
+        """Confirms existence and callability of average() function."""
         assert callable(average)
 
     def test_count_returns_int(self):
-        """The function count() should return a float."""
+        """The function average() should return a float."""
         # setup
         file_name = Path.cwd() / "test" / "test_nums.txt"
         data = read_ints(file_name)
@@ -111,8 +111,8 @@ class TestAverage:
         # validation
         assert isinstance(mean_of_ints, float)
 
-    def test_summation_returns_correct_answer(self):
-        """The function summation() should return expected value for
+    def test_average_returns_correct_answer(self):
+        """The function average() should return expected value for
         the test data."""
         # setup
         file_name = Path.cwd() / "test" / "test_nums.txt"
@@ -121,3 +121,57 @@ class TestAverage:
         mean_of_ints = average(data)
         # validation
         assert mean_of_ints == 6.4
+
+
+class TestMinimum:
+    def test_minimum_is_function(self):
+        """Confirms existence and callability of minimum() function."""
+        assert callable(minimum)
+
+    def test_count_returns_int(self):
+        """The function minimum() should return an integer."""
+        # setup
+        file_name = Path.cwd() / "test" / "test_nums.txt"
+        data = read_ints(file_name)
+        # execution
+        min_of_ints = minimum(data)
+        # validation
+        assert isinstance(min_of_ints, int)
+
+    def test_minimum_returns_correct_answer(self):
+        """The function minimum() should return expected value for
+        the test data."""
+        # setup
+        file_name = Path.cwd() / "test" / "test_nums.txt"
+        data = read_ints(file_name)
+        # execution
+        min_of_ints = minimum(data)
+        # validation
+        assert min_of_ints == 0
+
+
+class TestMaximum:
+    def test_maximum_is_function(self):
+        """Confirms existence and callability of maximum() function."""
+        assert callable(maximum)
+
+    def test_maximum_returns_int(self):
+        """The function maximum() should return an integer."""
+        # setup
+        file_name = Path.cwd() / "test" / "test_nums.txt"
+        data = read_ints(file_name)
+        # execution
+        max_of_ints = maximum(data)
+        # validation
+        assert isinstance(max_of_ints, int)
+
+    def test_maximum_returns_correct_answer(self):
+        """The function maximum() should return expected value for
+        the test data."""
+        # setup
+        file_name = Path.cwd() / "test" / "test_nums.txt"
+        data = read_ints(file_name)
+        # execution
+        max_of_ints = maximum(data)
+        # validation
+        assert max_of_ints == 0
