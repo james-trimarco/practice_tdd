@@ -28,6 +28,14 @@ def summation(data: List[int]) -> int:
     return sum(data)
 
 
+def minimum(data: List[int]) -> int:
+    return min(data)
+
+
+def maximum(data: List[int]) -> int:
+    return max(data)
+
+
 def average(data: List[int]) -> float:
     sum_of_ints = summation(data)
     count_of_ints = count(data)

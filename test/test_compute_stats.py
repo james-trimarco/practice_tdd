@@ -1,6 +1,8 @@
 from practicetdd.refactoring_legacy_code.compute_stats import (
     average,
     count,
+    maximum,
+    minimum,
     read_ints,
     summation,
 )
@@ -147,7 +149,7 @@ class TestMinimum:
         # execution
         min_of_ints = minimum(data)
         # validation
-        assert min_of_ints == 0
+        assert min_of_ints == 3
 
 
 class TestMaximum:
@@ -174,4 +176,4 @@ class TestMaximum:
         # execution
         max_of_ints = maximum(data)
         # validation
-        assert max_of_ints == 0
+        assert max_of_ints == 12
