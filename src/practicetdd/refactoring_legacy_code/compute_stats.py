@@ -24,6 +24,10 @@ def count(data: List[int]) -> int:
     return len(data)
 
 
+def summation(data: List[int]) -> int:
+    return None  # sum(data)
+
+
 def compute_stats(file):
     total = 0
     sum = 0
