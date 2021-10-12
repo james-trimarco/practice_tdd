@@ -1,4 +1,8 @@
-from practicetdd.refactoring_legacy_code.compute_stats import read_ints, count
+from practicetdd.refactoring_legacy_code.compute_stats import (
+    read_ints,
+    count,
+    summation,
+)
 from pathlib import Path
 import pytest
 
@@ -68,3 +72,13 @@ class TestSummation:
     def test_summation_is_function(self):
         """Confirms existence and callability of summation() function."""
         assert callable(summation)
+
+    def test_count_returns_int(self):
+        """The function count() should return an integer."""
+        # setup
+        file_name = Path.cwd() / "test" / "test_nums.txt"
+        data = read_ints(file_name)
+        # execution
+        sum_of_ints = summation(data)
+        # validation
+        assert isinstance(sum_of_ints, int)
