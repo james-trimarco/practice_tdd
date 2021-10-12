@@ -92,4 +92,4 @@ class TestSummation:
         # execution
         sum_of_ints = summation(data)
         # validation
-        assert sum_of_ints == 1
+        assert sum_of_ints == 32
