@@ -82,3 +82,14 @@ class TestSummation:
         sum_of_ints = summation(data)
         # validation
         assert isinstance(sum_of_ints, int)
+
+    def test_summation_returns_correct_answer(self):
+        """The function summation() should return expected value for
+        the test data."""
+        # setup
+        file_name = Path.cwd() / "test" / "test_nums.txt"
+        data = read_ints(file_name)
+        # execution
+        sum_of_ints = summation(data)
+        # validation
+        assert sum_of_ints == 1
