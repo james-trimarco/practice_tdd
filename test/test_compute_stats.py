@@ -62,3 +62,9 @@ class TestCount:
         integer_count = count(data)
         # validation
         assert integer_count == 5
+
+
+class TestSummation:
+    def test_summation_is_function(self):
+        """Confirms existence and callability of summation() function."""
+        assert callable(summation)
