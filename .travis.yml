@@ -7,8 +7,9 @@ python:
   - "pypy3" # currently Python 3.6.1,  PyPy 7.1.1-beta0
 # command to install dependencies
 install:
+  - pip install -U pip
   - pip install -r requirements.txt
-  - pip install -e .
+  - pip setup.py install
   - pip install .
 # command to run tests
 script: pytest
