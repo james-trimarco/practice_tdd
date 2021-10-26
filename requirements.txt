@@ -1,2 +1,4 @@
+black~=21.7
 pytest~=6.2.1
 requests~=2.26.0
+tox~=3.24.0
